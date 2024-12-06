@@ -4,10 +4,25 @@
         <title>jinja tags</title>  
     </head>
     <body>
-      <h1> jinja tags </h1>
+       {% comment %} <h1> jinja tags </h1>
         <li>{{name}} <br>
         <li>{{age}} <br>
-        <li>{{gender}} <br>
-        
+        <li>{{gender}} <br>  {% endcomment %}
+        <h1>gvu</h1>
+        {% if gender == 'male' %}
+            {% if age >= 21 %}
+                <h1>{{name}} your ****** by your thougths until you get job </h1> 
+            {% else %} 
+                <h1>{{name}} your exempted....</h1>  
+            {% endif %}   
+        {% else %}
+            {% if gender == 'female' %}
+                {% if age >= 21 %}
+                    <h1>{{name}} people ask when are you going to marry????</h1>
+                {% else %}
+                    <h1>{{name}} your exampted....</h1>
+                {% endif %}
+            {% endif %}
+        {% endif %} 
     </body>
 </html>
